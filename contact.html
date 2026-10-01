@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Star Bakery | Contact and Preorders</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <img class="site-logo" src="media/bakery-logo_c.png" alt="North Star Bakery logo with a loaf of bread and wheat">
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Contact North Star Bakery</h1>
+
+    <div class="contact-layout">
+      <section class="contact-details panel" aria-labelledby="visit-heading">
+        <h2 id="visit-heading">Visit or pick up an order</h2>
+        <address>
+          North Star Bakery<br>
+          101 Main Street<br>
+          Hometown, MN 55001<br>
+          Phone: <a href="tel:+15550140101">(555) 014-0101</a><br>
+          Email: <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+        </address>
+        <p>Tuesday-Friday: 6:30 a.m.-6:00 p.m.<br>
+          Saturday-Sunday: 7:00 a.m.-3:00 p.m.<br>
+          Monday: Closed</p>
+      </section>
+
+      <section class="contact-form" aria-labelledby="form-heading">
+        <h2 id="form-heading">Inquiry and preorder request</h2>
+        <p>Use this form to ask a general question or request a preorder. Submitting a request does not confirm an order; our team will follow up with availability and final details.</p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Your information</legend>
+
+            <p>
+              <label for="name">Name:</label><br>
+              <input type="text" id="name" name="name" minlength="2" maxlength="60" autocomplete="name" required>
+            </p>
+
+            <p>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" maxlength="100" autocomplete="email" required>
+            </p>
+
+            <p>
+              <label for="pickup-date">Requested pickup date:</label><br>
+              <input type="date" id="pickup-date" name="pickup-date" required>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Request details</legend>
+
+            <p><strong>Request type:</strong></p>
+            <div class="radio-group">
+              <p class="radio-option">
+                <input type="radio" id="preorder" name="request-type" value="preorder" required>
+                <label for="preorder">Preorder</label>
+              </p>
+              <p class="radio-option">
+                <input type="radio" id="general-question" name="request-type" value="general-question">
+                <label for="general-question">General question</label>
+              </p>
+            </div>
+
+            <p>
+              <label for="item-details">Item details or question:</label><br>
+              <textarea id="item-details" name="item-details" rows="6" minlength="10" maxlength="500" required></textarea>
+            </p>
+
+            <p>
+              <label for="allergy-notes">Allergy notes, if applicable:</label><br>
+              <textarea id="allergy-notes" name="allergy-notes" rows="4" maxlength="300"></textarea>
+            </p>
+          </fieldset>
+
+          <p><button type="submit">Send request</button></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 North Star Bakery. Handmade for our community.</p>
+  </footer>
+</body>
+</html>

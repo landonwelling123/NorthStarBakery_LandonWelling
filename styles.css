@@ -1,0 +1,401 @@
+:root {
+  --cream: #fff8ee;
+  --brown: #2f211a;
+  --rust: #8a3f2a;
+  --gold: #d2a24a;
+  --body-font: Arial, Helvetica, sans-serif;
+  --heading-font: Georgia, "Times New Roman", serif;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --radius: 0.75rem;
+  --content-width: 70rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+  border-radius: var(--radius);
+}
+
+picture img {
+  width: 100%;
+}
+
+a {
+  color: var(--rust);
+  font-weight: 700;
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.2em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: -5rem;
+  z-index: 10;
+  background: var(--gold);
+  color: var(--brown);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+.site-header {
+  background: var(--brown);
+  color: var(--cream);
+  padding: var(--space-3) max(var(--space-2), calc((100% - var(--content-width)) / 2));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.site-logo {
+  width: 11rem;
+  border-radius: 0;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.site-nav a {
+  display: block;
+  min-height: 44px;
+  padding: 0.65rem 0.9rem;
+  color: var(--cream);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: var(--rust);
+}
+
+.site-nav a[aria-current="page"] {
+  background: var(--gold);
+  color: var(--brown);
+}
+
+main {
+  width: min(calc(100% - 2rem), var(--content-width));
+  margin-inline: auto;
+  padding-block: var(--space-4) var(--space-5);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--heading-font);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 3.4rem);
+  margin-bottom: var(--space-2);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: var(--rust);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p,
+li,
+address,
+figcaption,
+label,
+input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+.lead {
+  max-width: 65ch;
+  font-size: 1.1rem;
+}
+
+section {
+  margin-top: var(--space-4);
+}
+
+.panel {
+  padding: var(--space-3);
+  border: 1px solid rgba(47, 33, 26, 0.22);
+  border-radius: var(--radius);
+}
+
+.hero,
+.split,
+.contact-layout,
+.product-grid,
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hero-copy,
+.hero-media,
+.split > *,
+.contact-layout > *,
+.product-grid > *,
+.team-grid > * {
+  min-width: 0;
+}
+
+.hero-media img,
+.split img,
+figure img {
+  width: 100%;
+}
+
+.feature-list {
+  padding-left: 1.25rem;
+}
+
+.feature-list li + li {
+  margin-top: var(--space-1);
+}
+
+.featured-card {
+  background: var(--brown);
+  color: var(--cream);
+  padding: var(--space-3);
+  border-radius: var(--radius);
+}
+
+.featured-card h2,
+.featured-card h3 {
+  color: var(--gold);
+}
+
+.featured-card a {
+  color: var(--gold);
+}
+
+.button-link,
+button {
+  display: inline-block;
+  min-height: 44px;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--rust);
+  color: var(--cream);
+  padding: 0.75rem 1.1rem;
+  font-family: var(--body-font);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-link:hover,
+button:hover {
+  background: var(--brown);
+}
+
+figure {
+  margin: var(--space-3) 0 0;
+}
+
+figcaption {
+  margin-top: var(--space-1);
+  font-style: italic;
+}
+
+.product-card,
+.team-card {
+  flex: 1 1 0;
+  padding: var(--space-3);
+  border: 1px solid rgba(47, 33, 26, 0.22);
+  border-radius: var(--radius);
+}
+
+.price {
+  font-weight: 700;
+}
+
+video {
+  width: 100%;
+  background: var(--brown);
+}
+
+address {
+  font-style: normal;
+}
+
+form {
+  width: 100%;
+}
+
+fieldset {
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid rgba(47, 33, 26, 0.35);
+  border-radius: var(--radius);
+}
+
+legend {
+  padding-inline: var(--space-1);
+  color: var(--rust);
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+label {
+  font-weight: 700;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 0.35rem;
+  padding: 0.7rem;
+  border: 2px solid rgba(47, 33, 26, 0.35);
+  border-radius: 0.4rem;
+  background: var(--cream);
+  color: var(--brown);
+  font-family: var(--body-font);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  min-height: 44px;
+}
+
+.radio-option input {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.site-footer {
+  background: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: var(--space-3) var(--space-2);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-nav ul {
+    justify-content: flex-end;
+  }
+
+  .hero,
+  .split,
+  .contact-layout {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-copy,
+  .hero-media,
+  .split > *,
+  .contact-layout > * {
+    flex: 1 1 0;
+  }
+
+  .product-grid,
+  .team-grid {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .contact-layout {
+    align-items: flex-start;
+  }
+
+  .contact-details {
+    flex: 0 1 35%;
+  }
+
+  .contact-form {
+    flex: 1 1 65%;
+  }
+}
+
+@media (min-width: 75rem) {
+  body {
+    font-size: 1.05rem;
+  }
+}
